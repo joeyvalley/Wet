@@ -1,41 +1,139 @@
-html, body { height: 100%; margin: 0; padding: 0; background: radial-gradient(circle, rgba(55,68,172,1) 0%, rgba(113,145,212,1) 63%, rgba(201,222,255,1) 100%); background-size: 600% 600%; -webkit-animation: AnimationName 5s ease infinite; -moz-animation: AnimationName 45s ease infinite; -o-animation: AnimationName 45s ease infinite; animation: AnimationName 45s ease infinite;}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, rgba(216, 168, 173, 1) 5%, rgba(134, 148, 209, 1) 100%, rgba(201, 222, 255, 1) 100%);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 45s ease infinite;
+  -o-animation: AnimationName 45s ease infinite;
+  animation: AnimationName 45s ease infinite;
+}
 
-.container { position: relative; width: 1210px; height: 100%; margin-left: calc(50% - 605px); padding: 0; border-left: 0px dotted black; }
-.vid-container { position: relative; width: 1192px; height: 100%; margin-left: calc(50% - 605px); padding: 0; border-left: 1px dotted black; border-right: 1px dotted black; }
-.box {display:block; padding: 3px 0px 3px 0px;}
+#overlay {
+  position: fixed;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/img/dots.png");
+  mix-blend-mode: saturation;
+  opacity: 100%;
+}
 
-.box img {width: 100%;}
-/* .box img:hover {width: 100%; filter: invert(100%);} */
+#spinner {
+  mix-blend-mode: saturation;
+}
 
-a img { display: block; }
+.container {
+  position: relative;
+  width: 1210px;
+  height: 100%;
+  margin-left: calc(50% - 605px);
+  padding: 0;
+  border-left: 0px dotted black;
+  /* background-image: url("./assets/img/dots.jpg"); */
+}
+
+.vid-container {
+  position: relative;
+  width: 1192px;
+  height: 100%;
+  margin-left: calc(50% - 605px);
+  padding: 0;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
+}
+
+.box {
+  display: block;
+  padding: 3px 0px 3px 0px;
+}
+
+.box img {
+  width: 100%;
+  mix-blend-mode: luminosity;
+
+}
+
+.box img:hover {
+  mix-blend-mode: normal;
+}
+
+*/ a img {
+  display: block;
+}
 
 
-.left {float: left;}
-.right {float: right;}
+.left {
+  float: left;
+}
 
-@font-face {
-    font-family: Maria;
-    src: url("Maria.otf");
+.right {
+  float: right;
 }
 
 @font-face {
-	font-family: "Courier New", Courier, monospace;
+  font-family: Maria;
+  src: url("./assets/fonts/Maria.otf");
 }
 
-h1 { font-family: Maria; font-size: 1.5em; color: #000; line-height:0.7em; }
-p { font-family: Courier New; font-size: 10pt; color: #FFF;  display: block; }
-table { border-collapse: collapse; width: 100%; font-family: Courier New; font-size: 10pt; font-style: normal; color: #FFF;  }
+h1 {
+  font-family: Maria;
+  font-size: 1.5em;
+  color: #000;
+  line-height: 0.7em;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10pt;
+  color: #FFF;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Courier New;
+  font-size: 10pt;
+  font-style: normal;
+  color: #FFF;
+}
 
 /* LINKS */
-a:link { color: #000; text-decoration: none; }
-a:visited { color: #000; text-decoration: none;}
-a:hover { background-color: #000; ;color: #4fae62; text-decoration: none; }
-a:active { color: #000; text-decoration: none;}
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #000;
+  ;
+  color: #4fae62;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000;
+  text-decoration: none;
+}
 
 
-.clock { animation: blinker 1s step-start infinite; }
+.clock {
+  animation: blinker 1s step-start infinite;
+}
 
-@keyframes blinker {50% { opacity: 0;} }
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 
 .rotate {
   animation: rotation 10s infinite linear;
@@ -45,6 +143,7 @@ a:active { color: #000; text-decoration: none;}
   from {
     transform: rotate(359deg);
   }
+
   to {
     transform: rotate(0deg);
   }
@@ -56,33 +155,59 @@ a:active { color: #000; text-decoration: none;}
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #000; 
+  background: #000;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FFF; 
+  background: #FFF;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #EEE; 
+  background: #EEE;
   cursor: pointer;
 }
 
 /* ANIMATION STUFF */
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }

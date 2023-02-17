@@ -1,0 +1,41 @@
+html, body { height: 100%; margin: 0; padding: 0;}
+.container{overflow: scroll; height: 100vh; scroll-snap-type: mandatory; scroll-snap-points-y: repeat(100vh); scroll-snap-type: y mandatory; background: radial-gradient(circle, rgba(55,68,172,1) 0%, rgba(113,145,212,1) 63%, rgba(201,222,255,1) 100%); background-size: 600% 600%; -webkit-animation: AnimationName 5s ease infinite; -moz-animation: AnimationName 45s ease infinite; -o-animation: AnimationName 45s ease infinite; animation: AnimationName 45s ease infinite;}
+.child {height: 100vh; scroll-snap-align: start; position: relative;}
+
+.centerd { position: absolute; top: 50%; left: 50%; z-index: 1; height: 60vh; width: auto; z-index: 11; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);  }
+.centerd2 { position: absolute; top: 50%; left: 50%; z-index: 1; height: auto; width:100vh; z-index: 11; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);  }
+.texterd { text-align: center; padding-top: 100px; } 
+
+#actual {height: auto; padding: 0px 10px 0px 10px; margin: 0;}
+
+/* FONTS */
+@font-face { font-family: "Courier New", Courier, monospace; }
+@font-face { font-family: Maria; src: url("../Maria.otf"); }
+@font-face { font-family: Suisse; src: url("../Suisse.otf"); }
+
+h1 { font-family: Suisse; font-size: 1em; color: #fff; line-height:0.7em; }
+p { font-family: Suisse; font-size: 12pt; color: #fff;  display: block;}
+
+/* LINKS */
+a:link { color: #fff; text-decoration: none; }
+a:visited { color: #fff; text-decoration: none;}
+a:hover { color: #000; text-decoration: none; }
+a:active { color: #fff; text-decoration: none;}
+
+/* ANIMATION STUFF */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+

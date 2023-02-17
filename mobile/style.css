@@ -1,0 +1,103 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+
+/*background: #4fae62; */
+
+body {
+    background: linear-gradient(45deg, #2c5bad, #5284de, #abc1ee, #c37dcd, #d89de1);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 45s ease infinite;
+    -moz-animation: AnimationName 45s ease infinite;
+    -o-animation: AnimationName 45s ease infinite;
+    animation: AnimationName 45s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+
+#container { position: relative; width: 90%; height: 100%; margin-left: 5%; padding-top: 10px;}
+
+.box {width: 100%; padding-bottom: 10px; }
+
+#spinny { width: 40px; height: 40px; }
+
+img {width: 100%;}
+
+a img { display: block; }
+
+table { border-collapse: collapse; width: 100%; font-family: Courier New; font-size: 10pt; font-style: normal; color: #FFF;  }
+
+
+.left {float: left;}
+.right {float: right;}
+
+@font-face {
+    font-family: Maria;
+    src: url("../Maria.otf");
+}
+
+@font-face {
+	font-family: "Courier New", Courier, monospace;
+}
+
+h1 { font-family: Maria; font-size: 1.5em; color: #000; line-height:0.7em; }
+p { font-family: Courier New; font-size: 10pt; color: #FFF;  display: block; }
+
+/* LINKS */
+a:link { color: #000; text-decoration: none; }
+a:visited { color: #000; text-decoration: none;}
+a:hover { background-color: #000; ;color: #4fae62; text-decoration: none; }
+a:active { color: #000; text-decoration: none;}
+
+
+.clock { animation: blinker 1s step-start infinite; }
+
+@keyframes blinker {50% { opacity: 0;} }
+
+.rotate {
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

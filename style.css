@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background: radial-gradient(circle, rgba(216, 168, 173, 1) 5%, rgba(134, 148, 209, 1) 100%, rgba(201, 222, 255, 1) 100%);
@@ -9,6 +9,7 @@ body {
   -moz-animation: AnimationName 45s ease infinite;
   -o-animation: AnimationName 45s ease infinite;
   animation: AnimationName 45s ease infinite;
+  overflow-y: hidden;
 }
 
 #overlay {

@@ -17,7 +17,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url("./assets/img/dots.png");
-  mix-blend-mode: saturation;
+  mix-blend-mode: luminosity;
   opacity: 100%;
 }
 
@@ -52,13 +52,12 @@ body {
 
 .box img {
   width: 100%;
-  mix-blend-mode: luminosity;
-
-}
-
-.box img:hover {
   mix-blend-mode: normal;
 }
+
+/* .box img:hover {
+  mix-blend-mode: normal;
+} */
 
 */ a img {
   display: block;

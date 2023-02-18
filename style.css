@@ -1,9 +1,14 @@
+@font-face {
+  font-family: Maria;
+  src: url("./assets/fonts/Maria.otf");
+}
+
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, rgba(216, 168, 173, 1) 5%, rgba(134, 148, 209, 1) 100%, rgba(201, 222, 255, 1) 100%);
-  background-size: 1000% 1000%;
+  background: radial-gradient(circle, rgba(55, 68, 172, 1) 0%, rgba(113, 145, 212, 1) 63%, rgba(201, 222, 255, 1) 100%);
+  background-size: 600% 600%;
   -webkit-animation: AnimationName 45s ease infinite;
   -moz-animation: AnimationName 45s ease infinite;
   -o-animation: AnimationName 45s ease infinite;
@@ -11,17 +16,35 @@ body {
   overflow-y: hidden;
 }
 
-#tour-column {
-  position: absolute;
-  width: 300px;
+.box {
+  display: block;
+  padding: 3px 0px 3px 0px;
+}
+
+.box img {
+  width: 100%;
+  mix-blend-mode: exclusion;
+}
+
+.clock {
+  animation: blinker 1s step-start infinite;
+}
+
+.container {
+  position: relative;
+  width: 1210px;
   height: 100%;
-  left: 592px;
-  border-right: 1px dotted black;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 10pt;
+  margin-left: calc(50% - 605px);
+  padding: 0;
+  border-left: 0px dotted black;
+}
+
+h1 {
+  font-family: Maria;
+  font-size: 16pt;
+  color: #000;
+  line-height: 0.7em;
+  mix-blend-mode: overlay;
 }
 
 #info-column {
@@ -33,6 +56,11 @@ body {
   border-right: 1px dotted black;
   padding-left: 10px;
 }
+
+.left {
+  float: left;
+}
+
 
 #links-column {
   position: absolute;
@@ -49,10 +77,29 @@ body {
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  background: url("./assets/img/dots.png");
-  mix-blend-mode: saturation;
+  background: linear-gradient(rgb(251, 0, 255) 0%, rgb(216, 110, 198) 50%, rgb(227, 126, 205) 100%);
+  background-size: 600% 600%;
+  mix-blend-mode: luminosity;
   opacity: 100%;
-  animation: animatedBackground2 30s linear infinite;
+  -webkit-animation: AnimationName 45s ease infinite;
+  -moz-animation: AnimationName 45s ease infinite;
+  -o-animation: AnimationName 45s ease infinite;
+  animation: AnimationName 45s ease infinite;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10pt;
+  color: #FFF;
+  mix-blend-mode: overlay;
+}
+
+.right {
+  float: right;
+}
+
+.rotate {
+  animation: rotation 10s infinite linear;
 }
 
 #spinner {
@@ -64,13 +111,17 @@ body {
   text-align: center;
 }
 
-.container {
-  position: relative;
-  width: 1210px;
+#tour-column {
+  position: absolute;
+  width: 300px;
   height: 100%;
-  margin-left: calc(50% - 605px);
-  padding: 0;
-  border-left: 0px dotted black;
+  left: 592px;
+  border-right: 1px dotted black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10pt;
 }
 
 .vid-container {
@@ -83,63 +134,7 @@ body {
   border-right: 1px dotted black;
 }
 
-.box {
-  display: block;
-  padding: 3px 0px 3px 0px;
-}
-
-.box img {
-  width: 100%;
-  mix-blend-mode: exclusion;
-}
-
-.box img:hover {
-  mix-blend-mode: normal;
-}
-
-/* a img {
-  display: block;
-} */
-
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-@font-face {
-  font-family: Maria;
-  src: url("./assets/fonts/Maria.otf");
-}
-
-h1 {
-  font-family: Maria;
-  font-size: 16pt;
-  color: #000;
-  line-height: 0.7em;
-  mix-blend-mode: overlay;
-}
-
-p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 10pt;
-  color: #FFF;
-  mix-blend-mode: overlay;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-family: Courier New;
-  font-size: 10pt;
-  font-style: normal;
-  color: #FFF;
-}
-
-/* LINKS */
+/* Links */
 a:link {
   color: #000;
   text-decoration: none;
@@ -160,10 +155,6 @@ a:hover {
 a:active {
   color: #000;
   text-decoration: none;
-}
-
-.clock {
-  animation: blinker 1s step-start infinite;
 }
 
 
@@ -246,10 +237,6 @@ a:active {
   50% {
     opacity: 0;
   }
-}
-
-.rotate {
-  animation: rotation 10s infinite linear;
 }
 
 @keyframes rotation {

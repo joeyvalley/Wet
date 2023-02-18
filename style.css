@@ -1,15 +1,47 @@
-html,
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
   background: radial-gradient(circle, rgba(216, 168, 173, 1) 5%, rgba(134, 148, 209, 1) 100%, rgba(201, 222, 255, 1) 100%);
   background-size: 1000% 1000%;
-  -webkit-animation: AnimationName 5s ease infinite;
+  -webkit-animation: AnimationName 45s ease infinite;
   -moz-animation: AnimationName 45s ease infinite;
   -o-animation: AnimationName 45s ease infinite;
   animation: AnimationName 45s ease infinite;
   overflow-y: hidden;
+}
+
+#tour-column {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 592px;
+  border-right: 1px dotted black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10pt;
+}
+
+#info-column {
+  position: absolute;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
+  padding-left: 10px;
+}
+
+#links-column {
+  position: absolute;
+  width: 280px;
+  height: 100%;
+  left: 923px;
+  border-right: 1px dotted black;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #overlay {
@@ -18,12 +50,29 @@ body {
   width: 100vw;
   height: 100vh;
   background: url("./assets/img/dots.png");
-  mix-blend-mode: luminosity;
+  mix-blend-mode: saturation;
   opacity: 100%;
+  animation: animatedBackground2 60s linear infinite;
 }
 
-#spinner {
+/* #overlay2 {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/img/dots.png");
   mix-blend-mode: saturation;
+  opacity: 100%;
+  animation: animatedBackground 50s linear infinite;
+} */
+
+#spinner {
+  mix-blend-mode: overlay;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  text-align: center;
 }
 
 .container {
@@ -53,16 +102,16 @@ body {
 
 .box img {
   width: 100%;
+  mix-blend-mode: exclusion;
+}
+
+.box img:hover {
   mix-blend-mode: normal;
 }
 
-/* .box img:hover {
-  mix-blend-mode: normal;
-} */
-
-*/ a img {
+/* a img {
   display: block;
-}
+} */
 
 
 .left {
@@ -80,16 +129,17 @@ body {
 
 h1 {
   font-family: Maria;
-  font-size: 1.5em;
+  font-size: 16pt;
   color: #000;
   line-height: 0.7em;
+  mix-blend-mode: overlay;
 }
 
 p {
   font-family: "Courier New", Courier, monospace;
   font-size: 10pt;
   color: #FFF;
-  display: block;
+  mix-blend-mode: overlay;
 }
 
 table {
@@ -115,7 +165,7 @@ a:visited {
 a:hover {
   background-color: #000;
   ;
-  color: #4fae62;
+  color: rgba(216, 168, 173, 1);
   text-decoration: none;
 }
 
@@ -123,7 +173,6 @@ a:active {
   color: #000;
   text-decoration: none;
 }
-
 
 .clock {
   animation: blinker 1s step-start infinite;
@@ -156,6 +205,7 @@ a:active {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #000;
+
 }
 
 /* Handle */
@@ -209,5 +259,25 @@ a:active {
 
   100% {
     background-position: 0% 50%
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10% 10%;
+  }
+}
+
+@keyframes animatedBackground2 {
+  from {
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: 90% 90%;
   }
 }

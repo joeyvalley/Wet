@@ -11,75 +11,151 @@
   <link rel="icon" type="image/png" href="./assets/img/SPIN.png">
   <link rel="stylesheet" type="text/css" href="./style.css">
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
+  <script src="./bandsintown.js" defer></script>
 </head>
 
 <body>
   <div id="overlay"></div>
+  <!-- <div id="overlay2"></div> -->
   <div class="container">
-    <div class="box"
-      style="position: absolute; left: 0; width: 260px; height: 100%; border-left: 1px dotted black; border-right: 1px dotted black; padding-left: 10px;">
+    <div id="info-column" class="box">
       <h1>Wet</h1>
-      <p>New York City, NY<br /><span id="date"></span><br /><span id="hours">--</span><span id="point"
-          class="clock">:</span><span id="min">--</span><span id="point" class="clock">:</span><span id="sec">--</span>
-        EST <span id="deg"></span>°F</p>
-      <div id="spinner" style="position: absolute; width: 100%; left: 0; bottom: 10px; text-align:center;">
-        <img class="rotate" src="./assets/img/SPIN.png" style="width: 40px;" />
+      <p>
+        <span id="location">New York City, NY</span>
+        <br />
+        <span id="date"></span>
+        <br />
+        <span id="time"></span>
+        <!-- <span id="deg"></span>°F -->
+      </p>
+      <div id="spinner" style="">
+        <img class="rotate" src="./assets/img/spin-black.png" style="width: 40px;" />
       </div>
     </div>
+
     <div class="box"
       style="position: absolute; width: 300px; height: 100%; left: 271px; border-right: 0px dotted black; overflow-x: hidden; overflow-y: auto; padding-left: 10px; padding-right: 10px;">
       <h1>Releases</h1>
-      <a href="https://wet.ffm.to/letterblue" target="_blank"><img src="./assets/img/LB.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Letter Blue</a></span><span class="right">2021</span><br /><span
-          class="left">other-exotica, LLC.</span><span class="right"><a href="https://wet.ffm.to/letterblue"
-            target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/kUUK4b6" target="_blank"><img src="./assets/img/TF.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">This Fog</a></span><span class="right">2020</span><br /><span
-          class="left">other-exotica, LLC. </span><span class="right"><a href="http://li.sten.to/kUUK4b6"
-            target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/USXnYiV" target="_blank"><img src="./assets/img/OB.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Old Bone / Trust No Man</a></span><span
-          class="right">2019</span><br /><span class="left">Columbia Records</span><span class="right"><a
-            href="http://li.sten.to/USXnYiV" target="_blank">Listen</a></span><br /></p>
-
-      <a href="https://allwet.bandcamp.com/album/single-sound" target="_blank"><img src="./assets/img/SS.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Single Sound</a></span><span
-          class="right">2018</span><br /><span class="left">other-exotica, LLC. </span><span class="right"><a
-            href="https://allwet.bandcamp.com/album/single-sound" target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/QjI5Zo8" target="_blank"><img src="./assets/img/SR.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Still Run</a></span><span class="right">2018</span><br /><span
-          class="left">Columbia Records</span><span class="right"><a href="http://li.sten.to/QjI5Zo8"
-            target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/S5ofp2p" target="_blank"><img src="./assets/img/TMTA.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">The Middle / Turn Away</a></span><span
-          class="right">2016</span><br /><span class="left">Columbia Records</span><span class="right"><a
-            href="http://li.sten.to/S5ofp2p" target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/BJJlmaX" target="_blank"><img src="./assets/img/DY.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Don't You</a></span><span class="right">2016</span><br /><span
-          class="left">Columbia Records</span><span class="right"><a href="http://li.sten.to/BJJlmaX"
-            target="_blank">Listen</a></span><br /></p>
-
-      <a href="http://li.sten.to/uM72qSv" target="_blank"><img src="./assets/img/EP.jpg" /></a>
-      <p><span class="left" style="font-style: italic;">Wet</a></span><span class="right">2014</span><br /><span
-          class="left">Neon Gold</span><span class="right"><a href="http://li.sten.to/uM72qSv"
-            target="_blank">Listen</a></span><br /></p>
-
+      <div id="letter-blue">
+        <a href="https://wet.ffm.to/letterblue" target="_blank"><img src="./assets/img/LB.jpg" /></a>
+        <p>
+          <span class="left" style="font-style: italic;">Letter Blue</span>
+          <span class="right">2021</span>
+          <br />
+          <span class="left">other-exotica, LLC.</span>
+          <span class="right"><a href="https://wet.ffm.to/letterblue" target="_blank">Listen</a></span>
+          <br />
+        </p>
+      </div>
+      <div id="this-fog">
+        <a href="http://li.sten.to/kUUK4b6" target="_blank">
+          <img src="./assets/img/TF.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">This Fog</a></span>
+          <span class="right">2020</span>
+          <br />
+          <span class="left">other-exotica, LLC. </span>
+          <span class="right">
+            <a href="http://li.sten.to/kUUK4b6" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="old-bone">
+        <a href="http://li.sten.to/USXnYiV" target="_blank">
+          <img src="./assets/img/OB.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">Old Bone / Trust No Man</a></span>
+          <span class="right">2019</span>
+          <br />
+          <span class="left">Columbia Records</span>
+          <span class="right">
+            <a href="http://li.sten.to/USXnYiV" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="single-sound">
+        <a href="https://allwet.bandcamp.com/album/single-sound" target="_blank">
+          <img src="./assets/img/SS.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">Single Sound</span>
+          <span class="right">2018</span>
+          <br />
+          <span class="left">other-exotica, LLC. </span>
+          <span class="right">
+            <a href="https://allwet.bandcamp.com/album/single-sound" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="still-run">
+        <a href="http://li.sten.to/QjI5Zo8" target="_blank">
+          <img src="./assets/img/SR.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">Still Run</span>
+          <span class="right">2018</span>
+          <br />
+          <span class="left">Columbia Records</span>
+          <span class="right">
+            <a href="http://li.sten.to/QjI5Zo8" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="the-middle">
+        <a href="http://li.sten.to/S5ofp2p" target="_blank">
+          <img src="./assets/img/TMTA.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">The Middle / Turn Away</span>
+          <span class="right">2016</span><br /><span class="left">Columbia Records</span>
+          <span class="right">
+            <a href="http://li.sten.to/S5ofp2p" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="don't-you">
+        <a href="http://li.sten.to/BJJlmaX" target="_blank">
+          <img src="./assets/img/DY.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">Don't You</span>
+          <span class="right">2016</span>
+          <br />
+          <span class="left">Columbia Records</span>
+          <span class="right">
+            <a href="http://li.sten.to/BJJlmaX" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
+      <div id="ep">
+        <a href="http://li.sten.to/uM72qSv" target="_blank">
+          <img src="./assets/img/EP.jpg" />
+        </a>
+        <p>
+          <span class="left" style="font-style: italic;">Wet</span>
+          <span class="right">2014</span>
+          <br />
+          <span class="left">Neon Gold</span>
+          <span class="right">
+            <a href="http://li.sten.to/uM72qSv" target="_blank">Listen</a>
+          </span>
+          <br />
+        </p>
+      </div>
     </div>
-    <div class="box"
-      style="position: absolute; width: 300px; height: 100%; left: 592px; border-right: 1px dotted black; overflow-x: hidden; overflow-y: auto; padding-left: 10px; padding-right: 10px; font-size: 10pt;">
+    <div id="tour-column" class="box">
       <h1>Tour</h1>
-      <p>Currently no tour dates, we're writing a new record.</p>
     </div>
-    <div class="box"
-      style="position: absolute; width: 280px; height: 100%; left: 923px; border-right: 1px dotted black; overflow-x: hidden; overflow-y: auto;">
+    <div id="links-column" class="box">
       <h1>Contact</h1>
       <p>Management: <a href="mailto:kirby@verdigrismanagement.com">Kirby Lee</a></p>
       <p>Booking (US): <a href="mailto:John@Groundcontroltouring.Com">John</a>, <a
@@ -89,18 +165,28 @@
       <p>General: <a href="mailto:info@wet.band">info@wet.band</a></p>
 
       <h1>Links</h1>
-      <p><a href="https://wet.shop.musictoday.com/store" target="_blank">Store</a><br />--<br /><a
-          href="https://open.spotify.com/artist/2i9uaNzfUtuApAjEf1omV8?si=67nb61iPSHaOl_QQqTA4BA"
-          target="_blank">Spotify</a><br /><a href="https://music.apple.com/us/artist/wet/128746835"
-          target="_blank">Apple Music</a><br /><a href="http://allwet.bandcamp.com"
-          target="_blank">Bandcamp</a><br />--<br /><a href="http://instagram.com/wet"
-          target="_blank">Instagram</a><br /><a href="http://twitter.com/wet" target="_blank">Twitter</a><br /><a
-          href="http://facebook.com/wet" target="_blank">Facebook</a><br /><a
-          href="https://www.youtube.com/channel/UCnv13TELqgusefHUSLeCayQ" target="_blank">YouTube</a><br />--<br /><a
-          href="https://en.wikipedia.org/wiki/Wet_(band)" target="_blank">Wikipedia</a></p>
+      <p>
+        <a href="https://wet.shop.musictoday.com/store" target="_blank">Store</a>
+        <br />--<br />
+        <a href="https://open.spotify.com/artist/2i9uaNzfUtuApAjEf1omV8?si=67nb61iPSHaOl_QQqTA4BA"
+          target="_blank">Spotify</a>
+        <br />
+        <a href="https://music.apple.com/us/artist/wet/128746835" target="_blank">Apple Music</a>
+        <br />
+        <a href="http://allwet.bandcamp.com" target="_blank">Bandcamp</a>
+        <br />--<br />
+        <a href="http://instagram.com/wet" target="_blank">Instagram</a>
+        <br />
+        <a href="http://twitter.com/wet" target="_blank">Twitter</a>
+        <br />
+        <a href="http://facebook.com/wet" target="_blank">Facebook</a>
+        <br />
+        <a href="https://www.youtube.com/channel/UCnv13TELqgusefHUSLeCayQ" target="_blank">YouTube</a>
+        <br />--<br />
+        <a href="https://en.wikipedia.org/wiki/Wet_(band)" target="_blank">Wikipedia</a>
+      </p>
     </div>
   </div>
-
 </body>
 
 </html>

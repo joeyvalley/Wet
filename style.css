@@ -52,19 +52,8 @@ body {
   background: url("./assets/img/dots.png");
   mix-blend-mode: saturation;
   opacity: 100%;
-  animation: animatedBackground2 60s linear infinite;
+  animation: animatedBackground2 30s linear infinite;
 }
-
-/* #overlay2 {
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  background: url("./assets/img/dots.png");
-  mix-blend-mode: saturation;
-  opacity: 100%;
-  animation: animatedBackground 50s linear infinite;
-} */
 
 #spinner {
   mix-blend-mode: overlay;
@@ -82,7 +71,6 @@ body {
   margin-left: calc(50% - 605px);
   padding: 0;
   border-left: 0px dotted black;
-  /* background-image: url("./assets/img/dots.jpg"); */
 }
 
 .vid-container {
@@ -178,26 +166,8 @@ a:active {
   animation: blinker 1s step-start infinite;
 }
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
 
-.rotate {
-  animation: rotation 10s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(359deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
-}
-
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -219,7 +189,7 @@ a:active {
   cursor: pointer;
 }
 
-/* ANIMATION STUFF */
+/* Animations */
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 50%
@@ -272,12 +242,22 @@ a:active {
   }
 }
 
-@keyframes animatedBackground2 {
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.rotate {
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
   from {
-    background-position: 100% 100%;
+    transform: rotate(359deg);
   }
 
   to {
-    background-position: 90% 90%;
+    transform: rotate(0deg);
   }
 }

@@ -39,6 +39,10 @@ body {
   border-left: 0px dotted black;
 }
 
+#date {
+  display: block;
+}
+
 h1 {
   font-family: Maria;
   font-size: 16pt;
@@ -71,6 +75,12 @@ h1 {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+#location {
+  display: block;
+}
+
+
 
 #overlay {
   position: fixed;
@@ -125,6 +135,10 @@ p {
   left: 0;
   bottom: 10px;
   text-align: center;
+}
+
+#time {
+  display: block;
 }
 
 #tour-column {
@@ -262,5 +276,91 @@ a:active {
 
   to {
     transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  #asl {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  body {
+    overflow-y: scroll;
+    background: linear-gradient(45deg, #2c5bad, #5284de, #abc1ee, #c37dcd, #d89de1);
+    background-size: 1000% 1000%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #date {
+    display: inline;
+  }
+
+  #info-column {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  #links-column {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
+    padding: 0;
+    margin: 0;
+  }
+
+  #location {
+    display: inline;
+  }
+
+  #release-column {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
+    padding: 0;
+    margin: 0;
+  }
+
+  #spinner {
+    mix-blend-mode: overlay;
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+  }
+
+  #time {
+    display: inline;
+  }
+
+  #tour-column {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
+    padding: 0;
+    margin: 0;
   }
 }

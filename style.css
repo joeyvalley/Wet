@@ -94,6 +94,10 @@ p {
   mix-blend-mode: overlay;
 }
 
+.release-img {
+  cursor: pointer;
+}
+
 .right {
   float: right;
 }

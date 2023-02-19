@@ -94,6 +94,18 @@ p {
   mix-blend-mode: overlay;
 }
 
+#release-column {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 271px;
+  border-right: 0px dotted black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .release-img {
   cursor: pointer;
 }

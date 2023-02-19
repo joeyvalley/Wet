@@ -30,6 +30,28 @@ function checkTime(i) {
 }
 
 // Links for all the albums.
+const lbr = document.getElementById("lbr-link");
+lbr.addEventListener("click", () => {
+  window.open("http://li.sten.to/do9ix45n");
+})
+lbr?.addEventListener("mouseover", () => {
+  lbr.style.mixBlendMode = "difference";
+})
+lbr?.addEventListener("mouseout", () => {
+  lbr.style.mixBlendMode = "exclusion";
+})
+
+const pr = document.getElementById("pr-link");
+pr.addEventListener("click", () => {
+  window.open("http://li.sten.to/sl3s5nu1");
+})
+pr?.addEventListener("mouseover", () => {
+  pr.style.mixBlendMode = "difference";
+})
+pr?.addEventListener("mouseout", () => {
+  pr.style.mixBlendMode = "exclusion";
+})
+
 const lb = document.getElementById("lb-link");
 lb.addEventListener("click", () => {
   window.open("https://wet.ffm.to/letterblue");

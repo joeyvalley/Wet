@@ -335,8 +335,8 @@ a:active {
     height: fit-content;
     border-left: 0px dotted black;
     border-right: 0px dotted black;
-    padding: 0;
-    margin: 0px 0px 45px 0px;
+    padding: 0px 0px 75px 0px;
+    margin: 0;
   }
 
   #location {

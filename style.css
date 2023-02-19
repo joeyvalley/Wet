@@ -7,8 +7,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, rgba(55, 68, 172, 1) 0%, rgba(113, 145, 212, 1) 63%, rgba(201, 222, 255, 1) 100%);
-  background-size: 600% 600%;
+  background: linear-gradient(90deg, #abc1ee, #2c5bad, #5284de);
+  background-size: 1000% 1000%;
   -webkit-animation: AnimationName 45s ease infinite;
   -moz-animation: AnimationName 45s ease infinite;
   -o-animation: AnimationName 45s ease infinite;
@@ -175,12 +175,12 @@ a:active {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FFF;
+  background: #F9FFFF;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #EEE;
+  background: #F9FFFF;
   cursor: pointer;
 }
 

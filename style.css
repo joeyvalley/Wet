@@ -23,7 +23,7 @@ body {
 
 .box img {
   width: 100%;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: normal;
 }
 
 .clock {

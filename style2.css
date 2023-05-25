@@ -32,12 +32,11 @@ body {
 
 .container {
   position: relative;
-  width: 1183px;
+  width: 1210px;
   height: 100%;
-  margin-left: calc(50% - 592.5px);
+  margin-left: calc(50% - 605px);
   padding: 0;
-  border-left: 1px dotted black;
-  border-right: 1px dotted black;
+  border-left: 0px dotted black;
 }
 
 #date {
@@ -57,10 +56,9 @@ h1 {
   left: 0;
   width: 260px;
   height: 100%;
-  /* border-left: 1px dotted black; */
+  border-left: 1px dotted black;
   border-right: 1px dotted black;
   padding-left: 10px;
-  /* background: green; */
 }
 
 .left {
@@ -70,10 +68,10 @@ h1 {
 
 #links-column {
   position: absolute;
-  width: 260px;
+  width: 280px;
   height: 100%;
-  left: 913px;
-  padding-left: 10px;
+  left: 923px;
+  border-right: 1px dotted black;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -108,7 +106,7 @@ p {
   position: absolute;
   width: 300px;
   height: 100%;
-  left: 592px;
+  left: 271px;
   border-right: 0px dotted black;
   overflow-x: hidden;
   overflow-y: auto;
@@ -145,7 +143,7 @@ p {
   position: absolute;
   width: 300px;
   height: 100%;
-  left: 271px;
+  left: 592px;
   border-right: 1px dotted black;
   overflow-x: hidden;
   overflow-y: auto;
@@ -279,148 +277,7 @@ a:active {
   }
 }
 
-/* Smaller screens */
-@media screen and (max-width: 1200px) {
-  #asl {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-  }
-
-  body {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    background: linear-gradient(45deg, #2c5bad, #5284de, #abc1ee, #c37dcd, #d89de1);
-    background-size: 1000% 1000%;
-  }
-
-  .box {
-    width: 100%;
-  }
-
-  .box img {
-    width: 100%;
-    mix-blend-mode: normal;
-  }
-
-  .container {
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-    border: none;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-column-gap: 8px;
-    grid-row-gap: 16px;
-  }
-
-  #date {
-    display: inline;
-  }
-
-  h1 {
-    font-family: Maria;
-    font-size: 16pt;
-    color: #000;
-    line-height: 0.7em;
-    mix-blend-mode: overlay;
-  }
-
-  #info-column {
-    position: relative;
-    width: auto;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    border: none;
-    padding: 3px 10px;
-    margin: 0;
-  }
-
-  #links-column {
-    position: relative;
-    width: auto;
-    left: 0;
-    grid-row-start: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border: 1px dotted black;
-    border-radius: 10px;
-  }
-
-  #location {
-    display: none;
-  }
-
-  p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 10pt;
-    color: #FFF;
-    mix-blend-mode: overlay;
-  }
-
-  #release-column {
-    position: relative;
-    width: auto;
-    left: 0;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    border: 1px dotted black;
-    border-radius: 10px;
-  }
-
-  #spinner {
-    mix-blend-mode: overlay;
-    position: fixed;
-    width: 100%;
-    bottom: 5px;
-    text-align: center;
-  }
-
-  #time {
-    display: inline;
-  }
-
-  #tour-column {
-    position: relative;
-    left: 0;
-    width: auto;
-    grid-row-start: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    border: 1px dotted black;
-    border-radius: 10px;
-  }
-
-  /* Scrollbar */
-  ::-webkit-scrollbar {
-    width: 0
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000;
-
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #F9FFFF;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #F9FFFF;
-    cursor: pointer;
-  }
-}
-
-/* For phones and tablets */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1210px) {
   #asl {
     display: flex;
     justify-content: space-between;
@@ -444,7 +301,6 @@ a:active {
   .container {
     width: 90%;
     margin: 0 auto;
-    display: block;
   }
 
   #date {
@@ -475,7 +331,8 @@ a:active {
     left: 0;
     width: 100%;
     height: fit-content;
-    border: none;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
     padding: 0px 0px 75px 0px;
     margin: 0;
   }
@@ -496,7 +353,8 @@ a:active {
     left: 0;
     width: 100%;
     height: fit-content;
-    border: none;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
     padding: 0;
     margin: 0;
   }
@@ -507,7 +365,6 @@ a:active {
     width: 100%;
     bottom: 10px;
     text-align: center;
-    z-index: 50;
   }
 
   #time {
@@ -519,7 +376,8 @@ a:active {
     left: 0;
     width: 100%;
     height: fit-content;
-    border: none;
+    border-left: 0px dotted black;
+    border-right: 0px dotted black;
     padding: 0;
     margin: 0;
   }

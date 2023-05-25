@@ -35,7 +35,7 @@ lbr.addEventListener("click", () => {
   window.open("http://li.sten.to/do9ix45n");
 })
 lbr?.addEventListener("mouseover", () => {
-  lbr.style..mixBlendMode = "normal";
+  lbr.style.mixBlendMode = "normal";
 })
 lbr?.addEventListener("mouseout", () => {
   lbr.style.mixBlendMode = "normal";
@@ -46,7 +46,7 @@ pr.addEventListener("click", () => {
   window.open("http://li.sten.to/sl3s5nu1");
 })
 pr?.addEventListener("mouseover", () => {
-  pr.style..mixBlendMode = "normal";
+  pr.style.mixBlendMode = "normal";
 })
 pr?.addEventListener("mouseout", () => {
   pr.style.mixBlendMode = "normal";
@@ -57,7 +57,7 @@ lb.addEventListener("click", () => {
   window.open("https://wet.ffm.to/letterblue");
 })
 lb?.addEventListener("mouseover", () => {
-  lb.style..mixBlendMode = "normal";
+  lb.style.mixBlendMode = "normal";
 })
 lb?.addEventListener("mouseout", () => {
   lb.style.mixBlendMode = "normal";
@@ -68,7 +68,7 @@ tf.addEventListener("click", () => {
   window.open("http://li.sten.to/kUUK4b6");
 })
 tf?.addEventListener("mouseover", () => {
-  tf.style..mixBlendMode = "normal";
+  tf.style.mixBlendMode = "normal";
 })
 tf?.addEventListener("mouseout", () => {
   tf.style.mixBlendMode = "normal";
@@ -79,7 +79,7 @@ ob.addEventListener("click", () => {
   window.open("http://li.sten.to/USXnYiV");
 })
 ob?.addEventListener("mouseover", () => {
-  ob.style..mixBlendMode = "normal";
+  ob.style.mixBlendMode = "normal";
 })
 ob?.addEventListener("mouseout", () => {
   ob.style.mixBlendMode = "normal";
@@ -90,7 +90,7 @@ ss.addEventListener("click", () => {
   window.open("https://allwet.bandcamp.com/album/single-sound");
 })
 ss?.addEventListener("mouseover", () => {
-  ss.style..mixBlendMode = "normal";
+  ss.style.mixBlendMode = "normal";
 })
 ss?.addEventListener("mouseout", () => {
   ss.style.mixBlendMode = "normal";
@@ -101,7 +101,7 @@ sr.addEventListener("click", () => {
   window.open("http://li.sten.to/QjI5Zo8");
 })
 sr?.addEventListener("mouseover", () => {
-  sr.style..mixBlendMode = "normal";
+  sr.style.mixBlendMode = "normal";
 })
 sr?.addEventListener("mouseout", () => {
   sr.style.mixBlendMode = "normal";
@@ -112,7 +112,7 @@ tmta.addEventListener("click", () => {
   window.open("http://li.sten.to/S5ofp2p");
 })
 tmta?.addEventListener("mouseover", () => {
-  tmta.style..mixBlendMode = "normal";
+  tmta.style.mixBlendMode = "normal";
 })
 tmta?.addEventListener("mouseout", () => {
   tmta.style.mixBlendMode = "normal";
@@ -123,7 +123,7 @@ dy.addEventListener("click", () => {
   window.open("http://li.sten.to/BJJlmaX", "_blank");
 })
 dy?.addEventListener("mouseover", () => {
-  dy.style..mixBlendMode = "normal";
+  dy.style.mixBlendMode = "normal";
 })
 dy?.addEventListener("mouseout", () => {
   dy.style.mixBlendMode = "normal";
@@ -134,7 +134,7 @@ ep?.addEventListener("click", () => {
   window.open("http://li.sten.to/uM72qSv");
 })
 ep?.addEventListener("mouseover", () => {
-  ep.style..mixBlendMode = "normal";
+  ep.style.mixBlendMode = "normal";
 })
 ep?.addEventListener("mouseout", () => {
   ep.style.mixBlendMode = "normal";

@@ -1,7 +1,5 @@
 # www.wet.band
 
-## Background
-
 Wet is a band that I founded with friends in the summer of 2012. Over the past ten years we have released three critically-acclaimed albums and EPs, toured internationally with a diverse network of artists, and appeared on television and in film. 
 
 Throughout the band's career, I've built and maintained our website -- from very basic ASCII-art HTML pages to the (relatively) more involved iteration that is currently up.
